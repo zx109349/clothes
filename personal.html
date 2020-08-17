@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<style>
+			a{
+				color: black;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+				list-style: none;
+				
+			}	
+			#wrap{
+				width: 100%;
+				height: 1000px;	
+				
+			}
+			#header{
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				background-color: #F0F0F0;	
+			}
+			#header .reg{ color: #B20000;}
+			#header .idx{color: #B20000;}
+			#header a{color: #666;font-size: 12px;}
+			#header a:hover{color: #b20000;}		   
+			#header ul li.line{
+					width: 1px;
+					height: 12px;
+					overflow: hidden;
+					background: #ddd;
+					padding: 0;
+				}
+			a.tel{
+					padding-left: 20px;
+					background: url(img/cart.jpg) no-repeat left 5px;
+				}
+			a.idx{
+					padding-left: 20px;
+					background: url(img/index.jpg) no-repeat left 5px;
+				}
+			a.tel:hover{
+					background-position: left -20px;
+				}
+			a.idx:hover{
+					background-position: left -20px;
+				}
+			#header ul li{
+					display: inline-block;
+					padding: 0 8px;
+				}
+			#header	ul li a{
+					display: inline-block;
+				}
+			.hearder_right{
+					float: right;
+					margin-right: 100px;
+				}
+			.hearder_left{
+					float: left;
+					margin-left: 200px;
+				}
+				
+			#banner{
+				width: 100%;
+				height: 150px;
+				
+			}
+			#nav{
+				width: 100%;
+				height: 100px;
+				background-color: #c81623;
+			}
+			#nav_person{
+				width: 1200px;
+				height: 100px;
+				margin: 0 auto;
+				
+			}
+			.person{
+				font-size: 25px;
+				color: white;
+				font-weight:bold;
+				font-family: "微软雅黑";
+				margin-top: 26px;
+				display: inline-block;
+				margin-right: 60px;
+			}
+			#nav_person ul li{
+				float: left;
+			}
+			#nav_person a:link{
+				color: white;
+			}
+			#nav_person a:hover{
+				color: #FFA500;
+			}
+			.nav_person_ul{
+				
+				display: inline-block;
+			}
+			.white{
+				color: white;
+				margin-left: 60px;
+			}
+			#search{
+				float: right;
+				margin-top: 26px;
+				height: 30px;
+			}
+			#search input{
+				height: 30px;
+				width: 220px;
+				float: left;
+			}
+			#search button{
+				height: 33px;
+				width: 100px;
+				left: -6px;
+				bottom: 0px;
+				border: 1px #808080 solid;
+				cursor: pointer;
+				float: left;
+			}
+			/*content*/
+			#content{
+				width: 1200px;
+				height: 880px;
+				margin: 0 auto;
+				
+			}
+			#content_left{
+				width: 200px;
+				height: 500px;
+				display: inline-block;
+				float: left;
+				
+			}
+			#content_function{
+				color: #DF3033;
+			}
+			#content_left{
+				text-align: center;
+				margin-top: 20px;
+			
+			}
+			#content_left ul li{
+				margin-top: 20px;
+			}
+			#content_left a:hover{
+				color: #DF3033;
+			}
+			#content_right{
+				width: 800px;
+				height: 170px;
+				border: 1px #DDDDDD solid;
+				display: inline-block;
+				margin-left: 20px;
+				margin-top: 20px;
+			}
+			#content_head{
+				width: 800px;
+				height: 90px;
+				background-color:#E0E0E0;
+			}
+			.content_head_left{
+				width: 260px;
+				height: 80px;
+				float: left;
+				
+			}
+			.content_head_left img{
+				max-width: 100px;
+				max-height: 80px;
+				float: left;
+			}
+			.content_head_left .name{
+				margin-top: 30px;
+				float: left;
+				
+			}
+			.content_head_right{
+				width: 50px;
+				height: 50px;
+				
+				display: block;
+			}
+			.content_head_ul{
+				width: 380px;
+				float:left;
+				margin-left: 60px;
+				
+			}
+			.content_head_ul li{
+				float: left;
+				margin-left: 34px;
+				margin-top: 32px;				
+			}
+			 .content_head_ul a:link{
+				color:#696969
+			}
+			#tool{
+				width: 800px;
+				height: 80px;
+				background-color: white;
+			}
+			#tool ul{
+				padding-top: 30px;
+			}
+			#tool ul li{
+				float: left;
+				margin-left: 70px;
+				
+			}
+			#tool a:link{
+				color:#696969;
+				
+				}
+				#love{
+					width: 800px;
+					height: 680px;
+					background-color: #E0E0E0;
+					margin-left: 220px;
+					margin-top: 40px;
+				}
+				.love_top{
+					width: 800px;
+					height: 50px;
+					background-color:#FFA500;
+				}
+				.love_sp{
+					color: white;
+					margin-left: 40px;
+					margin-top: 10px;
+					display: inline-block;
+					font-size: 20px;
+				}
+				#group{
+					width: 50px;
+					height: 20px;
+					display: inline;
+					background-color:white;
+					float: right;
+					margin-top: 13px;
+					margin-right: 20px;
+				}
+				#group a:hover{
+					color: red;
+				}
+				.love_tu{
+					width: 240px;
+					height: 300px;
+					background-color: white;
+					float: left;
+					margin-left: 20px;
+					margin-top: 10px;
+					
+				}
+				.love_img img{
+					max-width: 240px;
+					max-height: 240px;
+				}
+				.jiage{
+					color: red;
+				}
+		</style>
+	</head>
+	<body>
+			<div id="wrap">
+				<div id="header">
+				<div class="hearder_right">
+					<ul>
+						<li><a href="login.html">你好，请登录</a>&emsp;<a href="regsiter.html" class="reg">免费注册</a></li>
+						<li class="line"></li>
+						<li><a href="personal.html">我的订单</a></li>
+						<li class="line"></li>
+						<li><a href="index.html">我的衣潮</a></li>
+						<li class="line"></li>
+						<li><a href="shopcart.html" class="tel">我的购物车</a></li>
+						<li class="line"></li>
+					</ul>
+					
+					</div>
+					<div class="hearder_left">
+						
+					<ul>
+						<li><a href="index.html" class="idx">我的首页</a></li>	
+					</ul>	
+					
+					
+				</div>
+			</div>
+			
+			<div id="nav">
+				<div id="nav_person">
+					<span class="person">个人中心</span>
+					<ul class="nav_person_ul">
+						<li class="white"><a href="index.html">首页</a></li>
+						<li class="white"><a href="#">账户设置</a></li>
+						<li class="white"><a href="#">消息</a></li>
+					</ul>
+					<div id="search">
+						<input type="text" name="" value="" />
+						<button>搜索</button>
+					</div>				
+				</div>	
+			</div>
+			<!--content-->
+			<div id="content">
+				<div id="content_left">
+					<ul>
+						<div id="content_function">全部功能</div>
+						<li><a href="shopcart.html">我的购物车</a></li>
+						<li><a href="#">已买到的宝贝</a></li>
+						<li><a href="#">购买过的店铺</a></li>
+						<li><a href="#">我的发票</a></li>
+						<li><a href="#">我的收藏</a></li>
+						<li><a href="#">我的积分</a></li>
+						<li><a href="#">我的优惠信息</a></li>
+						<li><a href="#">评价管理</a></li>
+						<li><a href="#">退款维权</a></li>
+						<li><a href="#">我的足迹</a></li>
+						<li><a href="#">流量钱包</a></li>
+					</ul>
+				</div>
+				<div id="content_right">
+					<div id="content_head">
+						<div class="content_head_left">
+							<img src="img/head_portrait.jpg"/>
+							<a href="" class="name"><em>欣子1512 (xin1512)</em></a>
+							
+						</div>
+						
+						<ul class="content_head_ul">
+							<li><a href="#">我的收货地址</a></li>
+							<li><a href="#">我的优惠信息</a></li>
+							<li><a href="#">我的支付宝</a></li>
+						</ul>	
+					</div>
+					<div id="tool">
+						<ul>
+							<li><a href="#">待付款&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+							<li><a href="#">待发货&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+							<li><a href="#">待收货&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+							<li><a href="#">待评价&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+							<li><a href="#">退款</a></li>
+						</ul>
+					</div>
+					
+				</div>
+				
+				<div id="love">
+					<div class="love_top">
+						<span class="love_sp">根据浏览,&nbsp;猜我喜欢</span>
+						<div id="group"><a href="#">换一组</a></div>
+					</div>
+					<div class="love_tu">
+						<div class="love_img">
+							<img src="img/clothing/coat/2_3.jpg">
+							<span>金丝绒短外套女春季</span><br/>
+							<span class="jiage">￥108.00</span>
+						</div>
+					</div>
+					<div class="love_tu">	
+						<div class="love_img">
+							<img src="img/clothing/coat/2_3.jpg">
+							<span>金丝绒短外套女春季</span><br/>
+							<span class="jiage">￥108.00</span>
+						</div>
+					</div>
+					<div class="love_tu">
+						<div class="love_img">
+							<img src="img/clothing/coat/2_3.jpg">
+							<span>金丝绒短外套女春季</span><br/>
+							<span class="jiage">￥108.00</span>
+						</div>
+					</div>
+					<div class="love_tu">
+						<div class="love_img">
+							<img src="img/clothing/coat/2_3.jpg">
+							<span>金丝绒短外套女春季</span><br/>
+							<span class="jiage">￥108.00</span>
+						</div>
+					</div>
+					<div class="love_tu">
+						<div class="love_img">
+							<img src="img/clothing/coat/2_3.jpg">
+							<span>金丝绒短外套女春季</span><br/>
+							<span class="jiage">￥108.00</span>
+						</div>
+					</div>
+					<div class="love_tu">
+						<div class="love_img">
+							<img src="img/clothing/coat/2_3.jpg">
+							<span>金丝绒短外套女春季</span><br/>
+							<span class="jiage">￥108.00</span>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+	</body>
+</html>

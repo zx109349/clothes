@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>用户登录</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<style type="text/css">
+		a{
+			color: black;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			list-style: none;
+		}
+		#wrap{
+			width: 100%;
+			height: 1100px;	
+			
+		}
+		#header{
+			width: 100%;
+			height: 30px;
+			line-height: 30px;
+			background-color: #F0F0F0;	
+		}
+		#header .reg{ color: #B20000;}
+		#header .idx{color: #B20000;}
+		#header a{color: #666;font-size: 12px;}
+		#header a:hover{color: #b20000;}		   
+		#header ul li.line{
+				width: 1px;
+				height: 12px;
+				overflow: hidden;
+				background: #ddd;
+				padding: 0;
+			}
+		a.tel{
+				padding-left: 20px;
+				background: url(img/cart.jpg) no-repeat left 5px;
+			}
+		a.idx{
+				padding-left: 20px;
+				background: url(img/index.jpg) no-repeat left 5px;
+			}
+		a.tel:hover{
+				background-position: left -20px;
+			}
+		a.idx:hover{
+				background-position: left -20px;
+			}
+		#header ul li{
+				display: inline-block;
+				padding: 0 8px;
+			}
+		#header	ul li a{
+				display: inline-block;
+			}
+		.hearder_right{
+				float: right;
+				margin-right: 100px;
+			}
+		.hearder_left{
+				float: left;
+				margin-left: 200px;
+			}
+			/*banner*/
+			#banner{
+			width: 100%;
+			height: 150px;
+			
+			}
+			#banner_logo{
+				width: 160px;
+				height: 160px;
+				display: inline-block;
+				margin-left: 100px;
+				
+			}
+			#banner_logo img{
+				max-width: 160px;
+				max-height: 160px;
+			}
+			.col-lg-6{
+				width: 180px;
+				display: inline-block;
+				float: right
+			}
+			.input-group{
+				border: 1px red solid;
+				width: 250px;
+				margin-top: 80px;
+				margin-right: 180px;
+				
+			}
+			.input-group-btn button{
+				background-color:#c81623;
+				color: white;
+			}
+				/*content*/
+			#content{
+				width: 1200px;
+				height: 40px;
+				margin: 0 auto;
+				}
+	
+			.content_nav ul li{
+					display: inline-block;
+					float: left;
+					width: 150px;
+					height: 40px;
+					line-height: 40px;
+					
+					
+				}
+				
+			.content_nav ul li ul{
+					display: none;
+				}
+			
+			.content_nav ul li:hover ul{
+				display: block;
+				background-color: black;
+				
+			}
+			.content_nav ul li:hover{
+				background-color:#F0F0F0;
+			}
+
+			
+			.content_nav ul{
+				display: inline-block;
+				text-align: center;
+
+			}
+
+		#cro{
+			width: 1200px;
+			height: 2px;
+			background-color: #c81623;
+			margin:0 auto;
+			}
+			#back{
+				width: 100%;
+				height:700px;
+				background: url(img/1.jpg) ;
+				
+			}
+			#back img{
+				position: relative;
+				z-index: z<0;
+			}
+			
+			#content_box{
+				width:1200px;
+				height:500px;
+				margin: 0 auto;
+				
+				padding-top: 200px;				
+			}
+			#login_box{
+				width: 500px;
+				height: 400px;
+				text-align: center;
+				margin: 0 auto;
+				background-color: #E0E0E0;
+						
+			}
+			#login_user{
+				display: inline-block;
+				width: 420px;
+				height: 280px;
+				margin-top: 60px;
+				
+			}
+			#login_user p{
+				font-size: 20px;
+				font-family: "微软雅黑";
+			}
+			#login_user .loginbar{
+				background-color: #B0C4DE;
+				color: white;
+				font-family: "微软雅黑";
+				
+			}
+			#login_user a:link{
+				color: red;
+			}
+			#login_user a:hover{
+				color: #FFA500;
+			}
+			.login_form{
+				margin-top:25px;	
+			}
+			.login_form input{
+				width: 200px;
+				height: 30px;
+				margin: 10px 0px;
+			}
+			#content_box #loginbar{
+				margin-left: 40px;
+			}
+			#content_box .zhuce{
+				margin-right:2px;
+				 font-size: 12px;
+			}
+			#footer{
+			width: 100%;
+			height: 300px;
+			background-color: black;
+		}
+		#footer_box{
+			width: 100%;
+			height: 140px;
+		 	margin: 0 auto;
+		
+			
+		}
+		 #footer_box p a{
+		    color: #fff;
+		    font-size: 20px;
+		    display: inline-block;
+			margin-left:60px;
+			text-align: center;
+			padding: 20px 0;
+			
+			
+}
+		
+		.text{
+			display: inline-block;
+			margin-left: 200px;
+			margin-top: 30px;
+			
+			}
+		.text img{
+			position: relative;
+			left: 50px;
+			top:20px;
+		}
+		#footer_text{
+			width: 1200px;
+			height:140px;
+			margin: 0  auto;
+		
+		}
+		#footer_bottom{
+			width: 1200px;
+			height: 160px;
+			margin: 0 auto;
+			
+		}
+	    #footer_bottom ul li{
+	    	margin-left: 20px;
+	    	color: #888888;
+	    	float: left;
+	    }
+	    #footer_bottom ul{
+	    	margin-left: 300px;
+	    	padding-top: 40px;
+	    	color: white;
+	    
+	    }
+	    #footer_bottom ul li a{
+	    	color: #888888;
+	    }
+			
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+				<div id="header">
+				<div class="hearder_right">
+					<ul>
+						<li><a href="login.html">你好，请登录</a>&emsp;<a href="regsiter.html" class="reg">免费注册</a></li>
+						<li class="line"></li>
+						<li><a href="personal.html">我的订单</a></li>
+						<li class="line"></li>
+						<li><a href="index.html">我的衣潮</a></li>
+						<li class="line"></li>
+						<li><a href="shopcart.html" class="tel">我的购物车</a></li>
+						<li class="line"></li>
+					</ul>
+					
+					</div>
+					<div class="hearder_left">
+						
+					<ul>
+						<li><a href="index.html" class="idx">我的首页</a></li>	
+					</ul>	
+					
+					
+				</div>
+			</div>
+			
+			<div id="banner">
+				<div id="banner_logo">
+					<img src="img/branding.png" />	
+					</div>
+					<div class="col-lg-6">
+					<div class="input-group">
+						<input type="text" class="form-control">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">
+							搜索
+							</button>
+						</span>
+					</div><!-- /input-group -->
+				</div><!-- /.col-lg-6 -->
+				
+			</div>
+			<!--content-->
+			<div id="content">
+				<div class="content_nav">
+					
+					
+					<ul>
+							
+						</li>
+						<li><a href="goods.html" >所有商品</a></li>
+						<li><a href="" >今日团购</a></li>
+						<li><a href="" >衣潮资讯</a></li>
+						<li><a href="" >关于我们</a></li>
+					</ul>
+				</div>
+			</div>
+		
+			<div id="cro">		
+			</div>
+			
+			<div id="back">
+				
+			
+			<div id="content_box">
+				<div id="login_box">
+					<div id="login_user">
+				<p style="padding-top: 25px;">用户登录</p>
+				<form action="index.html" method="post" class="login_form" onsubmit="return check()">
+					<span>用户名：</span><input type="text" value="请输入用户名"  id="name"/><br />
+					<span>密&nbsp;&nbsp;&nbsp;码：</span><input type="password" value="123456" id="psw" /><br />
+					<input type="submit" value="登录" class="loginbar" onclick=""/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="regsiter.html" class="zhuce">注册</a>
+				</form>	
+				</div>
+				</div>
+			</div>
+			</div>
+				<div id="footer">
+				<div id="footer_box">
+					<div id="footer_text">
+					<p class="text">
+						<img src="img/us_icon1.jpg.png" width="50px" height="50px"> 
+						<a class="icon1" href="#">7天无理由退换</a>
+						<img src="img/us_icon2.jpg.png" width="50px" height="50px">
+						<a class="icon3" href="#">100%品质保证</a>
+						<img src="img/us_icon3.jpg.png" width="50px" height="50px">
+						<a class="icon2" href="#">满99元全场免邮</a>
+					</div>
+						<hr style="border:1px #666666 solid ;"/>
+					</p>
+					
+				</div>
+				<div id="footer_bottom">
+					<ul>
+						<li><a href="#">关于我们</a><span style="margin-left: 20px;">|</span></li>
+						<li><a href="#">帮助中心</a><span style="margin-left: 20px;">|</span></li>
+						<li><a href="#">售后服务</a><span style="margin-left: 20px;">|</span></li>
+						<li><a href="#">衣潮资讯</a><span style="margin-left: 20px;">|</span></li>
+						<li><a href="#">关于货源</a><span style="margin-left: 20px;">|</span></li>
+					</ul>
+					<span style="margin-left: 480px;margin-top: 20px;display:inline-block;color:#888888">衣潮商城版权所有&copy;2019-2022</span>
+				</div>	
+					
+			</div>
+		
+</div>			
+	
+	</body>
+	<script>
+			function check(){
+				var rightUserName ="hello";
+				var rightPwd="123456";
+				
+				
+				var txtUserName =document.getElementById("name");
+				var UserName =txtUserName.value;
+				
+				var txtPwd=document.getElementById("psw");
+				var Pwd = txtPwd.value;
+				
+				if(UserName.length==0){
+					alert("用户名不能为空");
+					return false;
+				}else if(UserName!=rightUserName){
+					alert("用户名不正确");
+					return false;	
+				}else if(Pwd.length==0){
+					alert("密码不能为空");
+					return false;
+					
+				}else if(Pwd!=rightPwd){
+					alert("密码不正确");
+					return false;
+				}else{
+					alert("登录成功")
+					return true;
+				}
+				
+				
+			};
+			
+			
+		</script>
+	 
+</html>

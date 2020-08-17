@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>所有商品</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<style type="text/css">
+				
+			a{
+				color: black;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+				list-style: none;
+			}
+			#wrap{
+				width: 100%;
+				height: 2000px;	
+			}
+				
+			#header{
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				background-color: #F0F0F0;	
+			}
+			#header .reg{ color: #B20000;}
+			#header .idx{color: #B20000;}
+			#header a{color: #666;font-size: 12px;}
+			#header a:hover{color: #b20000;}		   
+			#header ul li.line{
+					width: 1px;
+					height: 12px;
+					overflow: hidden;
+					background: #ddd;
+					padding: 0;
+				}
+			a.tel{
+					padding-left: 20px;
+					background: url(img/cart.jpg) no-repeat left 5px;
+				}
+			a.idx{
+					padding-left: 20px;
+					background: url(img/index.jpg) no-repeat left 5px;
+				}
+			a.tel:hover{
+					background-position: left -20px;
+				}
+			a.idx:hover{
+					background-position: left -20px;
+				}
+			#header ul li{
+					display: inline-block;
+					padding: 0 8px;
+				}
+			#header	ul li a{
+					display: inline-block;
+				}
+			.hearder_right{
+					float: right;
+					margin-right: 100px;
+				}
+			.hearder_left{
+					float: left;
+					margin-left: 200px;
+				}
+				/*banner*/
+			#banner{
+			width: 100%;
+			height: 150px;
+			
+			}
+			#banner_logo{
+				width: 160px;
+				height: 160px;
+				display: inline-block;
+				margin-left: 100px;
+				
+			}
+			#banner_logo img{
+				max-width: 160px;
+				max-height: 160px;
+			}
+			.col-lg-6{
+				width: 180px;
+				display: inline-block;
+				float: right
+			}
+			.input-group{
+				border: 1px red solid;
+				width: 250px;
+				margin-top: 80px;
+				margin-right: 180px;
+				
+			}
+			.input-group-btn button{
+				background-color:#c81623;
+				color: white;
+			}
+			
+			#cro{
+				width: 1200px;
+				height: 2px;
+				background-color: #c81623;
+				margin:0 auto;
+				}
+						/*content*/
+			#content{
+				width: 1200px;
+				height: 100px;
+				
+				margin-top: 20px;
+				}
+	
+			.content_nav ul li{
+					display: inline-block;
+					float: left;
+					width: 150px;
+					height: 40px;
+					line-height: 40px;
+					
+					
+				}
+				
+			.content_nav ul li ul{
+					display: none;
+				}
+			
+			.content_nav ul li:hover ul{
+				display: block;
+				background-color: black;
+				
+			}
+			.content_nav ul li:hover{
+				background-color:#F0F0F0;
+			}
+
+			
+			.content_nav ul{
+				display: inline-block;
+				text-align: center;
+
+			}
+			/*goods*/
+			#goods{
+				width: 100%;
+				height: 1800px;
+				background-color: #F0F0F0;
+			}
+			#goods_box{
+				width: 1200px;
+				height: 1800px;
+				margin: 0 auto;
+				
+				
+			}	
+			.goods_range{
+				
+				height: 80px;
+				
+				
+			}
+			.goods_range ul {
+				width: 260px;
+				height: 30px;
+				background-color:white;
+				border: 1px #808080 solid;
+				display: inline-block;
+				margin-left: 50px;
+				margin-top: 25px;
+				
+				}
+			.goods_range ul li{
+				float: left;
+				margin-left: 10px;	
+				font-size: 20px;
+			}
+			.goods_range span{
+				color: #808080;
+				margin-left: 10px;
+			}
+			.goods_img{
+				width: 275px;
+				height: 350px;
+				background-color: white;
+				margin-left: 20px;
+				margin-top: 20px;
+				float: left;
+			}
+			.goods_tu img{
+				max-width: 275px;
+				max-height: 300px;
+			}
+			.goods_tu span{
+				margin-top: 8px;
+				display: inline-block;
+			}
+			.jiage{
+					color: red;
+					
+				}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="header">
+				<div class="hearder_right">
+					<ul>
+						<li><a href="login.html">你好，请登录</a>&emsp;<a href="regsiter.html" class="reg">免费注册</a></li>
+						<li class="line"></li>
+						<li><a href="personal.html">我的订单</a></li>
+						<li class="line"></li>
+						<li><a href="index.html">我的衣潮</a></li>
+						<li class="line"></li>
+						<li><a href="shopcart.html" class="tel">我的购物车</a></li>
+						<li class="line"></li>
+					</ul>	
+					</div>
+					<div class="hearder_left">	
+					<ul>
+						<li><a href="index.html" class="idx">我的首页</a></li>	
+					</ul>			
+				</div>
+			</div>
+			<!--banner-->
+			<div id="banner">
+				<div id="banner_logo">
+					<img src="img/branding.png" />	
+					</div>
+					<div class="col-lg-6">
+					<div class="input-group">
+						<input type="text" class="form-control">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">
+							搜索
+							</button>
+						</span>
+					</div><!-- /input-group -->
+				</div><!-- /.col-lg-6 -->
+				
+			</div>
+		
+			<div style="width: 1200px;  margin: 0 auto;" >	
+			
+			
+			<!--content-->
+			<div id="content">
+				<div class="content_nav">
+					
+					
+					<ul>
+							
+						</li>
+						<li><a href="goods.html" >所有商品</a></li>
+						<li><a href="" >今日团购</a></li>
+						<li><a href="" >衣潮资讯</a></li>
+						<li><a href="" >关于我们</a></li>
+					</ul>
+				</div>
+				<div id="cro"></div>
+			</div>		
+		</div>
+		<div id="goods">
+			<div id="goods_box">
+				<div class="goods_range">
+					<ul>
+						<li><a href="#">销量</a><span>|</span></li>
+						<li><a href="#">价格</a><span>|</span></li>
+						<li><a href="#">新品</a><span>|</span></li>
+						<li><a href="#">收藏</a></li>
+					</ul>
+				</div>
+				
+				<div class="goods_img">
+					<div class="goods_tu">
+						<img src="img/clothing/coat/1_1.jpg">
+						<span>连帽韩版牛仔外套女</span><br/>
+						<span class="jiage">￥109</span>
+					</div>
+						
+				</div>
+				<div class="goods_img">
+					<div class="goods_tu">
+						<img src="img/clothing/coat/1_1.jpg">
+						<span>连帽韩版牛仔外套女</span><br/>
+						<span class="jiage">￥109</span>
+					</div>	
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/coat/1_1.jpg">
+						<span>连帽韩版牛仔外套女</span><br/>
+						<span class="jiage">￥109</span>
+					</div>
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/coat/1_1.jpg">
+						<span>连帽韩版牛仔外套女</span><br/>
+						<span class="jiage">￥109</span>
+					</div>
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/coat/2_1.jpg">
+						<span>金丝绒短外套女春季</span><br/>
+						<span class="jiage">￥108</span>
+					</div>
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/coat/2_1.jpg">
+						<span>金丝绒短外套女春季</span><br/>
+						<span class="jiage">￥108</span>
+					</div>
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/coat/2_1.jpg">
+						<span>金丝绒短外套女春季</span><br/>
+						<span class="jiage">￥108</span>
+					</div>
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/coat/2_1.jpg">
+						<span>金丝绒短外套女春季</span><br/>
+						<span class="jiage">￥108</span>
+					</div>
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/shirt/15_1.jpg">
+						<span>加厚磨毛格子衬衫女</span><br/>
+						<span class="jiage">￥49.98</span>
+					</div>
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/shirt/15_1.jpg">
+						<span>加厚磨毛格子衬衫女</span><br/>
+						<span class="jiage">￥49.98</span>
+					</div>
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/shirt/15_1.jpg">
+						<span>加厚磨毛格子衬衫女</span><br/>
+						<span class="jiage">￥49.98</span>
+					</div>
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/shirt/15_1.jpg">
+						<span>加厚磨毛格子衬衫女</span><br/>
+						<span class="jiage">￥49.98</span>
+					</div>
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/skirt/7_1.jpg">
+						<span>韩版仙女裙显瘦够花镂空长袖连衣裙</span><br/>
+						<span class="jiage">￥64.99</span>
+					</div>
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/skirt/7_1.jpg">
+						<span>韩版仙女裙显瘦够花镂空长袖连衣裙</span><br/>
+						<span class="jiage">￥64.99</span>
+					</div>
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/skirt/7_1.jpg">
+						<span>韩版仙女裙显瘦够花镂空长袖连衣裙</span><br/>
+						<span class="jiage">￥64.99</span>
+					</div>
+				</div>
+				<div class="goods_img">
+						<div class="goods_tu">
+						<img src="img/clothing/skirt/7_1.jpg">
+						<span>韩版仙女裙显瘦够花镂空长袖连衣裙</span><br/>
+						<span class="jiage">￥64.99</span>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+				
+			</div>
+	</div>
+	</body>
+</html>

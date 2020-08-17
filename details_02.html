@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>商品详情</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<style type="text/css">
+		a{
+				color: black;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+				list-style: none;
+			}
+			#wrap{
+				width: 100%;
+				height: 2000px;	
+			}
+				
+			#header{
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				background-color: #F0F0F0;	
+			}
+			#header .reg{ color: #B20000;}
+			#header .idx{color: #B20000;}
+			#header a{color: #666;font-size: 12px;}
+			#header a:hover{color: #b20000;}		   
+			#header ul li.line{
+					width: 1px;
+					height: 12px;
+					overflow: hidden;
+					background: #ddd;
+					padding: 0;
+				}
+			a.tel{
+					padding-left: 20px;
+					background: url(img/cart.jpg) no-repeat left 5px;
+				}
+			a.idx{
+					padding-left: 20px;
+					background: url(img/index.jpg) no-repeat left 5px;
+				}
+			a.tel:hover{
+					background-position: left -20px;
+				}
+			a.idx:hover{
+					background-position: left -20px;
+				}
+			#header ul li{
+					display: inline-block;
+					padding: 0 8px;
+				}
+			#header	ul li a{
+					display: inline-block;
+				}
+			.hearder_right{
+					float: right;
+					margin-right: 100px;
+				}
+			.hearder_left{
+					float: left;
+					margin-left: 200px;
+				}
+					/*banner*/
+			#banner{
+			width: 100%;
+			height: 150px;
+			
+			}
+			#banner_logo{
+				width: 160px;
+				height: 160px;
+				display: inline-block;
+				margin-left: 100px;
+				
+			}
+			#banner_logo img{
+				max-width: 160px;
+				max-height: 160px;
+			}
+			.col-lg-6{
+				width: 180px;
+				display: inline-block;
+				float: right
+			}
+			.input-group{
+				border: 1px red solid;
+				width: 250px;
+				margin-top: 80px;
+				margin-right: 180px;
+				
+			}
+			.input-group-btn button{
+				background-color:#c81623;
+				color: white;
+			}
+			
+		
+		#cro{
+			width: 1200px;
+			height: 2px;
+			background-color: #c81623;
+			margin:0 auto;
+			}
+			
+			#cro{
+				width: 1200px;
+				height: 2px;
+				background-color: #c81623;
+				margin:0 auto;
+				}
+						/*content*/
+			#content{
+				width: 1200px;
+				height: 90px;
+				margin-top: 20px;
+				}
+	
+			.content_nav ul li{
+					display: inline-block;
+					float: left;
+					width: 150px;
+					height: 40px;
+					line-height: 40px;
+					
+					
+				}
+				
+			.content_nav ul li ul{
+					display: none;
+				}
+			
+			.content_nav ul li:hover ul{
+				display: block;
+				background-color: black;
+				
+			}
+			.content_nav ul li:hover{
+				background-color:#F0F0F0;
+			}
+
+			
+			.content_nav ul{
+				display: inline-block;
+				text-align: center;
+
+			}
+			
+			#nav ul li{
+				float: left;
+				padding-left: 10px;
+				
+			}
+			#nav a:hover{
+				color: red;
+			}
+			#details{
+				width: 1200px;
+				height: 700px;
+				
+				margin-top: 30px;
+			}
+			#details_L{
+				width: 450px;
+				height: 560px;
+				/*border: 1px red solid;*/
+				margin-top: 20px;
+				display: inline-block;
+				position: relative;
+			}
+			.details_list{
+				display: flex;
+			}
+			.details_list li{
+				
+				margin: 2px auto;
+			}
+			.details_list img{
+				max-width:100px; 
+				max-height:100px;
+				display: inline-block;
+			}
+			#details_L #tu{
+				display: inline-block;
+				max-width:450px ;
+				max-height:450px ;
+			}
+			#details_L #L_tu .cover{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 150px;
+				height: 150px;
+				background-color:hsla(0,0%,100%,.4);
+				cursor: move;
+				display: none;
+				
+				
+			}
+			#details .detail{
+				width: 450px;
+				height: 450px;
+				border: 1px red solid;
+				position: absolute;
+				top: 0;
+				left: 450px;
+				display: none;
+				background-image: url(img/clothing/coat/1_1.jpg);
+				background-size: 300%;
+				
+			}
+			#details_L .details_list .current{
+				border: 2px red solid;
+				
+			}
+			#details_R{
+				float: right;
+				width: 700px;
+				height: 550px;
+				
+				display: inline-block;
+				margin-top: 20px;
+				
+			}
+			#details_R span{
+				font-size: 30px;
+			}
+			#details_R_C{
+				width: 700px;
+				height: 210px;
+				background-color: #E0E0E0;
+				margin-top: 20px;
+				
+			}
+			#details_R_C span{
+				margin-top: 30px;
+				display: inline-block;
+				font-size: 20px;
+			}
+			#color div{
+				display: inline-block;
+				margin-left: 30px;
+				width: 50px;
+				height: 30px;
+				border: 1px #888888 solid;
+				text-align: center;
+				padding-top: 10px;
+				margin-top: 20px;
+				
+			}
+			#color #white{
+				border: 1px #FFA500 solid;
+			}
+			#num{
+				width: 200px;
+				height: 60px;
+				margin-top: 20px;
+					
+			}
+			#num .cut{
+				display: inline-block;
+			    padding: 0 6px;
+			    border: 1px solid #dddddd;
+			    background: #f8f8f8;
+			    width: 20px;
+			    text-align: center;
+			    font-size: 26px;
+			    cursor: pointer;
+			    margin-top: 15px;
+			    float: right;
+			  
+ 
+			}
+			#num .add{
+				display: inline-block;
+			    padding: 0 6px;
+			    border: 1px solid #dddddd;
+			    background: #f8f8f8;
+			    width: 20px;
+			    text-align: center;
+			    font-size: 26px;
+			    cursor: pointer;
+			     margin-top: 15px;
+			     float: right;
+			     
+			    
+ 
+			}
+			#num input{
+				display: inline-block;
+				width: 35px;
+				height: 30px;
+				text-align: center;
+				margin: 0 5px;
+				 float: right;
+				 margin-top: 15px;	
+				 
+			}
+			#buy{
+				width: 800px;
+				height: 100px;	
+				margin-top: 30px;
+				
+				}
+			#buy .purchase{
+				width: 200px;
+				height: 50px;
+				border: 1px #FFA500 solid;
+				background-color: white;
+				color: #FFA500;
+				
+			}
+			 #add_cart{
+				width: 200px;
+				height: 50px;
+				border: 1px #FFA500 solid;	
+				background-color: #FFA500;
+				color: white;
+				margin-left: 20px;
+				
+				
+				
+				
+			}  
+			#buy img{
+				
+				position: relative;
+				left: 80px;
+				top: 4px;
+				z-index:z>0;
+			}
+			
+			#hot{
+				width: 400px;
+				height: 1300px;
+			
+				display: inline-block;
+				float: left;
+			}
+			.hot_span{
+				font-size: 30px;
+				color: #666666;
+				margin-left: 10px;
+			}
+			#hot_goods{
+				width:360px;
+				height: 1250px;
+				
+				margin-left:20px;
+			}
+			#hot_goods img{
+				max-width: 360px;
+				max-height: 360px;
+				margin-top: 10px;
+				
+			}
+			#hot_goods span{
+				font-size: 20px;
+				margin: 0 20px;
+			}
+			#detail{
+				width: 800px;
+				height: 2200px;
+				
+				display: inline-block;
+				float: left;
+				
+			}
+			#detail span{
+				font-size: 30px;
+				color: #666666;
+			}
+	</style>
+	</head>
+	<body>
+			<div id="wrap">
+				<div id="header">
+					<div class="hearder_right">
+						<ul>
+							<li><a href="login.html">你好，请登录</a>&emsp;<a href="regsiter.html" class="reg">免费注册</a></li>
+							<li class="line"></li>
+							<li><a href="personal.html">我的订单</a></li>
+							<li class="line"></li>
+							<li><a href="index.html">我的衣潮</a></li>
+							<li class="line"></li>
+							<li><a href="shopcart.html" class="tel">我的购物车</a></li>
+							<li class="line"></li>
+						</ul>	
+					</div>
+					<div class="hearder_left">	
+						<ul>
+							<li><a href="index.html" class="idx">我的首页</a></li>	
+						</ul>			
+					</div>
+				</div>
+				<!--banner-->
+				<div id="banner">
+					<div id="banner_logo">
+					<img src="img/branding.png" />	
+					</div>
+					<div class="col-lg-6">
+					<div class="input-group">
+						<input type="text" class="form-control">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">
+							搜索
+							</button>
+						</span>
+					</div><!-- /input-group -->
+					</div><!-- /.col-lg-6 -->
+				</div>
+			
+				<div style="width: 1200px;  margin: 0 auto;" >	
+				
+				
+				<!--content-->
+				<div id="content">
+					<div class="content_nav">		
+						<ul>
+							
+							</li>
+							<li><a href="goods.html" >所有商品</a></li>
+							<li><a href="" >今日团购</a></li>
+							<li><a href="" >衣潮资讯</a></li>
+							<li><a href="" >关于我们</a></li>
+						</ul>
+					</div>	
+					<div id="cro"></div>
+				</div>
+				
+				
+				<div id="nav">
+					<ul>
+						<li><a href="#">首页></a></li>
+						<li><a href="#">所有商品></a></li>
+						<li><a href="#">产品详情</a></li>
+					</ul>	
+				</div>
+				
+				<div id="details">
+					<div id="details_L">
+						<div id="L_tu">
+							<img src="img/clothing/coat/1_1.jpg" id="tu"/>
+							<div class="cover"></div>
+						</div>
+						
+						<ul class="details_list">
+							<li><img class="current" src="img/clothing/coat/1_1.jpg"></li>	
+							<li><img src="img/clothing/coat/1_2.jpg"></li>	
+							<li><img src="img/clothing/coat/1_3.jpg"></li>
+							<li><img src="img/clothing/coat/1_4.jpg"></li>
+						</ul>
+						<div class="detail"></div>
+					</div>
+					
+					<div id="details_R">
+						<span>连帽韩版牛仔外套女</span>
+						<div id="details_R_C">
+							<span>参考价</span><del style="margin-left: 20px;text-decoration: line-through;">￥199.00</del><br/>
+							<span>活动价</span><span style="margin-left: 20px;color: red;font-size: 30px;">￥89.00</span><br/>
+							<span>送至</span><span style="margin-left: 20px;font-size: 10px;">广东至</span>
+							<select name="citys" id="citys">
+								<option value="gz">广州</option>
+								<option value="jy">揭阳</option>
+								<option value="sz">深圳</option>
+								<option value="sh">上海</option>
+							</select>		
+						</div>
+						<div id="color">
+							<span>颜色</span>
+							<div id="pink">黑色</div>
+							<div id="white">白色</div>
+						
+						</div>
+						<div id="num">
+							<span style="margin-top: 15px;display: inline-block;">数量</span>
+							<span class="add">+</span>
+							<input onkeyup="" maxlength="4" type="" name="" value="1">
+							<span class="cut">-</span>
+						</div>
+						<div id="buy">
+						   <button class="purchase" >立即购买</button>
+						   <img src="img/car.jpg" /><button class="add_cart" id="add_cart">加入购物车</button>
+						</div>
+					</div>
+				</div>
+				
+				<div id="hot">
+						<span class="hot_span">热销推荐</span>
+						<div id="hot_goods">
+							<img src="img/clothing/coat/1_1.jpg" />
+							<span>连帽韩版牛仔外套女</span><span style="color: red;float: right;">￥89</span>
+							
+							<img src="img/clothing/coat/1_1.jpg" />
+							<span>连帽韩版牛仔外套女</span><span style="color: red;float: right;">￥89</span>
+							
+							<img src="img/clothing/coat/1_1.jpg" />
+							<span>连帽韩版牛仔外套女</span><span style="color: red;float: right;">￥89</span>				
+						</div>
+						
+					</div>
+					
+				<div id="detail">
+					<span>详情</span>
+						<img src="img/clothing/coat/2_5.jpg" />
+						<img src="img/clothing/coat/2_6.jpg" />
+					
+				</div>
+				
+				</div>
+			</div>
+			<script>
+				var list =document.querySelector('.details_list'),
+				imgs=list.querySelectorAll('img'),
+				img=document.querySelector('#L_tu img'),
+				pic=document.querySelector('#details #L_tu'),
+				cover=document.querySelector('.cover'),
+				detail=document.querySelector('.detail');
+				details=document.querySelector('#details #details_L');
+				
+				list.addEventListener('mousemove',function(e){
+					if(e.target.tagName == 'IMG'){
+						img.src = e.target.src;
+						detail.style.backgroundImage = 'url('+e.target.src+')';
+						imgs.forEach(function(item){
+							item.className='';
+						})
+						e.target.className='current';
+					}
+				})
+				pic.addEventListener('mousemove',function(e){
+					var x = e.clientX,
+						y = e.clientY,
+						cx = pic.getBoundingClientRect().left,
+						cy = pic.getBoundingClientRect().top,
+						tx = x - cx -75;
+						ty = y - cy -75;
+						if(tx<0){
+							tx =0;
+						}
+						if(ty<0){
+							ty=0;
+						}
+						if(tx>300){
+							tx=300;
+						}
+						if(ty>300){
+							ty=300;
+						}
+						detail.style.backgroundPosition = tx/300*100+'% '+ty/300*100+'% ';
+						cover.style.left=tx +'px';
+						cover.style.top=ty +'px';
+						
+				})
+						
+				 pic.onmousemove=function(event){
+				        //滑块显示
+				      cover.style.display="block";
+				        //大图显示
+				      detail.style.display="block";
+						details.onmouseout=function(){
+				       //滑块隐藏
+				       cover.style.display="none";
+				        //大图隐藏
+				       detail.style.display="none";
+				    }
+						}		
+			</script>
+	</body>
+</html>

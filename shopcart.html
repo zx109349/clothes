@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>购物车</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<style type="text/css">
+			a{
+				color: black;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+				list-style: none;
+			}
+			#wrap{
+				width: 100%;
+				height: 2000px;	
+			}
+				
+			#header{
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				background-color: #F0F0F0;	
+			}
+			#header .reg{ color: #B20000;}
+			#header .idx{color: #B20000;}
+			#header a{color: #666;font-size: 12px;}
+			#header a:hover{color: #b20000;}		   
+			#header ul li.line{
+					width: 1px;
+					height: 12px;
+					overflow: hidden;
+					background: #ddd;
+					padding: 0;
+				}
+			a.tel{
+					padding-left: 20px;
+					background: url(img/cart.jpg) no-repeat left 5px;
+				}
+			a.idx{
+					padding-left: 20px;
+					background: url(img/index.jpg) no-repeat left 5px;
+				}
+			a.tel:hover{
+					background-position: left -20px;
+				}
+			a.idx:hover{
+					background-position: left -20px;
+				}
+			#header ul li{
+					display: inline-block;
+					padding: 0 8px;
+				}
+			#header	ul li a{
+					display: inline-block;
+				}
+			.hearder_right{
+					float: right;
+					margin-right: 100px;
+				}
+			.hearder_left{
+					float: left;
+					margin-left: 200px;
+				}
+			/*banner*/
+			#banner{
+			width: 100%;
+			height: 150px;
+			
+			}
+			#banner_logo{
+				width: 160px;
+				height: 160px;
+				display: inline-block;
+				margin-left: 100px;
+				
+			}
+			#banner_logo img{
+				max-width: 160px;
+				max-height: 160px;
+			}
+			.col-lg-6{
+				width: 180px;
+				display: inline-block;
+				float: right
+			}
+			.input-group{
+				border: 1px red solid;
+				width: 250px;
+				margin-top: 80px;
+				margin-right: 180px;
+				
+			}
+			.input-group-btn button{
+				background-color:#c81623;
+				color: white;
+			}
+			
+			#cro{
+				width: 1200px;
+				height: 2px;
+				background-color: #c81623;
+				margin:0 auto;
+				}
+						/*content*/
+			#content{
+				width: 1200px;
+				height: 90px;
+				margin-top: 20px;
+				}
+	
+			.content_nav ul li{
+					display: inline-block;
+					float: left;
+					width: 150px;
+					height: 40px;
+					line-height: 40px;
+					
+					
+				}
+				
+			.content_nav ul li ul{
+					display: none;
+				}
+			
+			.content_nav ul li:hover ul{
+				display: block;
+				background-color: black;
+				
+			}
+			.content_nav ul li:hover{
+				background-color:#F0F0F0;
+			}
+
+			
+			.content_nav ul{
+				display: inline-block;
+				text-align: center;
+
+			}
+			#main{
+				width: 1200px;
+				height: 200px;
+			}
+			#main img{
+				width: 1200px;
+				max-height: 200px;
+			}
+			#cart{
+				width: 1200px;
+				height: 1000px;
+				
+				margin-top: 50px;
+			}
+			#cart_layout{
+				width: 1200px;
+				height: 60px;
+				background-color:#EEEEEE ;
+				display: inline-block;
+			}
+			#cart_all{
+				display: inline-block;
+			}
+			#cart_all .chexk{
+				width: 20px;
+				height: 20px;
+				margin-top: 20px;
+				margin-left: 30px;
+				margin-right: 20px;
+									
+			}
+		
+			#cart_layout span{
+				margin-left: 160px;
+				
+			}
+			#cart_goods ul li{
+				width: 1200px;
+				height: 200px;
+				border: 1px #E0E0E0 solid;
+				
+				display: inline-block;
+			}
+			#cart_goods input{
+				width: 18px;
+				height: 18px;
+				display: inline-block;
+			}
+			 #one{
+			 	display:inline-block ;
+				margin-top:100px;
+				margin-left: 30px;
+			}
+			#cart_goods img{
+				max-width: 150px;
+				max-height: 150px;			    
+			}
+		
+			#add{
+				display: inline-block;
+			
+				width: 320px;
+				height: 150px;
+				position: relative;
+				left: 20px;
+				bottom: 70px;
+			}
+			#add img{
+				float: left;
+				
+			}
+			#add span{
+				margin-top:20px;
+				display: inline-block;
+				float: left;
+				margin-left: 10px;
+			}
+			#number{
+				display: inline-block;
+				margin-left: 130px;
+				
+				margin-bottom: 20px;
+			}
+		#number .cut_btn{
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			float: left;
+			border: 1px #888888 solid;
+			text-align: center;
+			cursor: pointer;
+			
+		}
+		#number input{
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			
+			float: left;
+			
+			display: inline-block;
+			
+			}
+		
+		  #number .add_btn{
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			text-align: center;
+			border: 1px #888888 solid;
+			cursor: pointer;
+		
+	
+		}
+		
+		#footer{
+			width: 1200px;
+			height: 100px;
+			background-color: #EEEEEE;
+		}	
+		#footer input{
+			margin-top: 40px;
+			margin-left: 30px;
+		}
+		#settlement{
+			display: inline-block;
+			float: right;		
+		}
+		#settlement button{
+			width: 120px;
+			height: 100px;
+			background-color: #FFA500;
+			color: white;
+			border: 1px #FFA500 solid ; 
+			
+			font-size: 30px;
+			cursor: pointer;
+		}
+		.span_man{
+			width: 100px;
+			height: 50;
+		}
+		</style>
+	</head>
+	<body>
+			<div id="wrap">
+				<div id="header">
+					<div class="hearder_right">
+						<ul>
+							<li><a href="login.html">你好，请登录</a>&emsp;<a href="regsiter.html" class="reg">免费注册</a></li>
+							<li class="line"></li>
+							<li><a href="personal.html">我的订单</a></li>
+							<li class="line"></li>
+							<li><a href="index.html">我的衣潮</a></li>
+							<li class="line"></li>
+							<li><a href="shopcart.html" class="tel">我的购物车</a></li>
+							<li class="line"></li>
+						</ul>	
+					</div>
+					<div class="hearder_left">	
+						<ul>
+							<li><a href="index.html" class="idx">我的首页</a></li>	
+						</ul>			
+					</div>
+				</div>
+				<!--banner-->
+				<div id="banner">
+					<div id="banner_logo">
+					<img src="img/branding.png" />	
+					</div>
+					<div class="col-lg-6">
+					<div class="input-group">
+						<input type="text" class="form-control">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">
+							搜索
+							</button>
+						</span>
+					</div><!-- /input-group -->
+					</div><!-- /.col-lg-6 -->
+					
+				</div>
+			
+				<div style="width: 1200px;  margin: 0 auto;" >	
+				
+				
+				<!--content-->
+				<div id="content">
+					<div class="content_nav">		
+						<ul>
+							
+							</li>
+							<li><a href="goods.html" >所有商品</a></li>
+							<li><a href="" >今日团购</a></li>
+							<li><a href="" >衣潮资讯</a></li>
+							<li><a href="" >关于我们</a></li>
+						</ul>
+					</div>	
+					<div id="cro"></div>
+				</div>
+				<div id="main"><img src="img/photos_4.jpg"></div>
+				<div id="cart">
+					<div id="cart_layout">
+						<div id="cart_all">
+							<input  type="checkbox" name="checkbox" value="1" class="chexk"/>
+						</div>
+						<label>全选</label>
+						<span>商品</span>
+						<span>单价</span>
+						<span>数量</span>
+						<span>小计</span>
+						<span>操作</span>
+					</div>
+					<div id="cart_goods">
+						<ul>
+							<li>
+								<span><input type="checkbox" name="" value="" id="one"></span>
+								<div id="add">
+									<img src="img/clothing/coat/1_2.jpg" />
+									<span>连帽韩版牛仔外套女</span><br/>
+									<span style="color: #808080;">黑色  m码</span>
+								</div>
+								<span class="span_money" style="margin-left: 85px;">￥89</span>
+								<div id="number">
+									<div class="cut_btn">-</div>
+		               				<input class="num" type="" name="" value="1" disabled="disabled">
+		                			<div class="add_btn">+</div>
+	                			</div>
+	                			<span style="margin-left: 120px;">￥89</span>
+	                			<span style="margin-left: 160px; cursor: pointer;">删除</span>
+							</li>
+							
+							
+							<li>
+								<span><input type="checkbox" name="" value="" id="one"></span>
+								<div id="add">
+									<img src="img/clothing/coat/2_1.jpg" />
+									<span>金丝绒短外套女春季</span><br/>
+									<span style="color: #808080;">粉色  m码</span>
+								</div>
+								<span style="margin-left: 85px;">￥88</span>
+								<div id="number">
+									<div class="cut_btn">-</div>
+		               					<input class="num" type="" name="" value="2" disabled="disabled">
+		                			<div class="add_btn">+</div>
+		                			</div>
+	                			<span style="margin-left: 120px;">￥88</span>
+	                			<span style="margin-left: 160px;cursor: pointer;">删除</span>	
+							</li>
+							   
+							   
+							<li>
+								<span><input type="checkbox" name="" value="" id="one"></span>
+								<div id="add">
+									<img src="img/clothing/sweater/10_1.jpg" />
+									<span>V领针织马甲小清新</span><br/>
+									<span style="color: #808080;">杏色  s码</span>
+								</div>
+								<span style="margin-left: 85px;">￥54</span>
+								<div id="number">
+									<div class="cut_btn">-</div>
+		               					<input class="num" type="" name="" value="2" disabled="disabled">
+		                			<div class="add_btn">+</div>
+		                			</div>
+	                			<span style="margin-left: 120px;">￥54</span>
+	                			<span style="margin-left: 160px;cursor: pointer;">删除</span>	
+							</li>							
+						</ul>
+						<div id="footer">
+							<input type="checkbox" name="" value="" checked="checked" />
+							<span style="margin-left: 20px;">已选0件</span>
+							<span style="margin-left: 40px;">批量删除</span>
+							<div id="settlement">
+								<span>应付：</span><span style="font-size: 26px;color: red;">￥0.00</span>
+							<button>结算</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				</div>
+			</div>
+		
+	</body>
+</html>
